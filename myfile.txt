@@ -1,0 +1,12 @@
+cx() {
+        cd $@
+        echo $PWD
+        ls
+}
+# new line
+cx() {
+        cd $@
+        echo $PWD
+        ls
+}
+# new line
