@@ -47,3 +47,20 @@ lx() {
 	ls
 }
 EOF
+
+grep gitx $HOME/.bashrc &> /dev/null || \
+	cat >> $HOME/.bashrc <<"EOF"
+	gitx() {
+	git add .
+	local text
+	if [ $# == 0 ]
+	then
+		text='.'
+	else
+		text=$1
+	fi
+	printf $text
+	git commit -m $text
+	git push
+}
+EOF
