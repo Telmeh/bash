@@ -1,0 +1,1 @@
+	Script which will append my functions to bash.bashrc
